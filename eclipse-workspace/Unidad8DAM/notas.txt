@@ -1,0 +1,4 @@
+Maria Ortiz 10 3 2 8 8
+Rosa Lopez 2 5 9 8 8
+Alberto Fernandez 1 1 4 8 8
+Carmen Medina 4 6 9 8 8

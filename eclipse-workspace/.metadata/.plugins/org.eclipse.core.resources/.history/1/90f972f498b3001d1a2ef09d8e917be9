@@ -1,0 +1,29 @@
+package examen2019;
+
+public class Proveedor extends Persona {
+	private double retencion;
+
+	public Proveedor() {
+		super();
+		this.retencion = 0;
+	}
+	
+	public Proveedor(int codigo, String cif, String nombre, String direccion, int telefono, int cp,
+			String persona_contacto, String email, double retencion) {
+		super(codigo, cif, nombre, direccion, telefono, cp, persona_contacto, email);
+		this.retencion = retencion;
+	}
+
+	public double getRetencion() {
+		return retencion;
+	}
+
+	public void setRetencion(double retencion) {
+		this.retencion = retencion;
+	}
+
+	@Override
+	public String toString() {
+		return "Proveedor [retencion=" + retencion + "]";
+	}
+}

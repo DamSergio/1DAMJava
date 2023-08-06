@@ -1,0 +1,12 @@
+jhbdfvsjdbvhbsdv
+sjvfsjdbfhjsbcd
+jshdvfjsbdfjksdc
+Cadena=jdbc:oracle:thin:@cloud.riberadeltajo.es:8011:XE
+sdhsdfbsnvnsdkjv
+skdbkjsdncklsndcksd
+sdhfbsjkdncjksncs
+usuario=serbalced
+skjbfjskdn
+sdkjbnsdjkcnsjkdc
+skjdfksdnc
+pass=QxarkjdC

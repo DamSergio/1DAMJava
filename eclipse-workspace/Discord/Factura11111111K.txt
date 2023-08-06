@@ -1,0 +1,9 @@
+Factura: 1000_11111111K
+Cliente: 11111111K
+******************************Productos***********************************
+1	Aguacate	5.98€/kg	3.0kg
+2	Papaya		5.22€/kg	4.0kg
+			TOTAL 38.82€
+			IVA 1.5528€
+			Descuento 4€
+			IMPORTE TOTAL 36.3728€

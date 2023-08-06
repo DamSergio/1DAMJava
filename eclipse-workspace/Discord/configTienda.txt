@@ -1,0 +1,4 @@
+jdbc:oracle:thin:@cloud.riberadeltajo.es:8011:XE-serbalced-QxarkjdC
+
+
+

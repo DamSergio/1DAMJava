@@ -1,0 +1,72 @@
+package examen2019;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Programa {
+	private ArrayList<Persona> proveedores;
+
+	public Programa() {
+		super();
+		this.proveedores = new ArrayList<>();
+	}
+	
+	public Programa(ArrayList<Persona> proveedores) {
+		super();
+		this.proveedores = proveedores;
+	}
+
+	public ArrayList<Persona> getProveedores() {
+		return proveedores;
+	}
+
+	public void setProveedores(ArrayList<Persona> proveedores) {
+		this.proveedores = proveedores;
+	}
+
+	public static void main(String[] args) {
+		Scanner t=new Scanner(System.in);
+		Programa p=new Programa();
+		
+		int op;
+		do {
+			p.menu();
+			op=t.nextInt();
+			
+			switch (op) {
+			case 1:
+				p.leerProveedores();
+			}
+		} while (op!=5);
+		
+	}
+	
+	private void leerProveedores() {
+		try {
+			Scanner in=new Scanner(new File("proveedores.csv"));
+			
+			in.nextLine();
+			while (in.hasNext()) {
+				String linea[]=in.nextLine().split(";");
+				
+				if (linea[3].equals("suministro")) {
+					
+				}
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	public void menu() {
+		System.out.println("1. Leer proveedores");
+		System.out.println("2. Leer pagos");
+		System.out.println("3. Generar IVA de un trimestre");
+		System.out.println("4. Informe de pagos anuales");
+		System.out.println("5. Salir");
+	}
+}

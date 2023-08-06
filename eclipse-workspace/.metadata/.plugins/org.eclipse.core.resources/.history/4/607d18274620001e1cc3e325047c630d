@@ -1,0 +1,62 @@
+package actividadRepaso;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Programa {
+	private ArrayList<Mascota> mascotas;
+	
+	public Programa() {
+		super();
+		this.mascotas = new ArrayList<>();
+	}
+	
+	public Programa(ArrayList<Mascota> mascotas) {
+		super();
+		this.mascotas = mascotas;
+	}
+	
+	public ArrayList<Mascota> getMascotas() {
+		return mascotas;
+	}
+
+	public void setMascotas(ArrayList<Mascota> mascotas) {
+		this.mascotas = mascotas;
+	}
+
+	public static void main(String[] args) {
+		Programa app = new Programa();
+		
+		app.getMascotas().add(new Perro(1, "Paco", true));
+		app.getMascotas().add(new Gato(17, "Cerdo", false));
+		app.getMascotas().add(new Perro(15, "Luis", true));
+		app.getMascotas().add(new Gato(8, "Pepe", true));
+		app.getMascotas().add(new Perro(13, "Lucas", true));
+		
+		System.out.println(app.mayorEdad());
+
+	}
+
+	private String mayorEdad() {
+		List<Mascota> ruidosos = new ArrayList<>();
+		
+		ruidosos = this.mascotas.stream().map(m -> m instanceof Perro ? (((Perro) m).isEstaLadrando() ? m : null) : (((Gato) m).isEstaMaullando() ? m : null)).filter(m -> m != null).map(m -> (Mascota) m).collect(Collectors.toList());
+		
+		for (Mascota m:ruidosos) {
+			System.out.println(m);
+		}
+		
+//		for (Mascota m:this.mascotas) {
+//			if (m instanceof Perro && ((Perro) m).isEstaLadrando()){
+//				ruidosos.add(m);
+//			}
+//			if (m instanceof Gato && ((Gato) m).isEstaMaullando()){
+//				ruidosos.add(m);
+//			}
+//		}
+		
+		int max = ruidosos.stream().mapToInt(i->i.getEdad()).max().getAsInt();
+		return ruidosos.stream().filter(i->i.getEdad()==max).collect(Collectors.toList()).get(0).getNombre();//+" "+ruidosos.stream().filter(i->i.getEdad()==max).collect(Collectors.toList()).get(0).getId();
+	}
+}

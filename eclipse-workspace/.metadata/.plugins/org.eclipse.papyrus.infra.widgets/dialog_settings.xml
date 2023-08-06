@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.papyrus.infra.widgets.providers.FlatFilteredContentProvider">
+		<item key="sort" value="false"/>
+	</section>
+	<section name="org.eclipse.papyrus.infra.widgets.editors.TreeSelectorDialog">
+		<item key="lastTab" value="default"/>
+	</section>
+</section>

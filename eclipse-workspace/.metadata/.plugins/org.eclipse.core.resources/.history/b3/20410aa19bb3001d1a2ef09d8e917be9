@@ -1,0 +1,30 @@
+package examen2019;
+
+import java.util.ArrayList;
+
+public class Proveedor extends Persona {
+	private double retencion;
+
+	public Proveedor() {
+		super();
+		this.retencion = 0;
+	}
+
+	public Proveedor(int codigo, String cif, String nombre, String persona_contacto, ArrayList<Pago> pagos, double retencion) {
+		super(codigo, cif, nombre, persona_contacto, pagos);
+		this.retencion = retencion;
+	}
+
+	public double getRetencion() {
+		return retencion;
+	}
+
+	public void setRetencion(double retencion) {
+		this.retencion = retencion;
+	}
+
+	@Override
+	public String toString() {
+		return "Proveedor [retencion=" + retencion + "]";
+	}
+}

@@ -1,0 +1,8 @@
+1677181914360	Rename local variable 'numero'
+1677181927853	Rename local variable 'caca'
+1677181972138	Extract method 'extracted'
+1677182022277	Extract method 'extracted2'
+1677182058500	Convert local variable 'suma' to field
+1677182116069	Convert local variable 'teclado' to field
+1677182171216	Extract local variable 'stringElnumero'
+1677182350630	Extract constant 'DAME_UN_NUMERO'

@@ -1,0 +1,5 @@
+Informe para Pedrito
+	Shrek	21.0 euros
+	Indiana Jones XIII	21.0 euros
+IMPORTE TOTAL = 42.0 euros
+Dispone de 3 puntos

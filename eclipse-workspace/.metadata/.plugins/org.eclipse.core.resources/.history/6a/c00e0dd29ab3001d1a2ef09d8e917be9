@@ -1,0 +1,17 @@
+package examen2019;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		Programa p=new Programa();
+		
+	}
+	
+	public void menu() {
+		System.out.println("1. Leer proveedores");
+		System.out.println("2. Leer pagos");
+		System.out.println("3. Generar IVA de un trimestre");
+		System.out.println("4. Informe de pagos anuales");
+		System.out.println("5. Salir");
+	}
+}

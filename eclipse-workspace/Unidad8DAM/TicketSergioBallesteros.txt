@@ -1,0 +1,2 @@
+Vehiculo: Moto [tipo=asdf, cilindrada=23.0, carnet=sdgsa]
+Importe: 25.0

@@ -1,0 +1,6 @@
+1677771084985	Extract local variable 'existedepart'
+1677771208542	Extract constant 'NOEXISTEDEPART'
+1677771284826	Extract local variable 'depar_error'
+1677771310619	Convert local variable 'depar_error' to field
+1677771405875	Extract method 'darDeAlta'
+1677771525234	Extract method 'darDeBaja'

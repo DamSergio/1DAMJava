@@ -1,0 +1,75 @@
+package examen2019;
+
+import java.util.ArrayList;
+
+public abstract class Persona {
+	private int codigo;
+	private String cif;
+	private String nombre;
+	private String persona_contacto;
+	private ArrayList<Pago> pagos;
+	
+	public Persona() {
+		super();
+		this.codigo = 0;
+		this.cif = "";
+		this.nombre = "";
+		this.persona_contacto = "";
+		this.pagos = new ArrayList<>();
+	}
+	
+	public Persona(int codigo, String cif, String nombre, String persona_contacto, ArrayList<Pago> pagos) {
+		super();
+		this.codigo = codigo;
+		this.cif = cif;
+		this.nombre = nombre;
+		this.persona_contacto = persona_contacto;
+		this.pagos = pagos;
+	}
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getCif() {
+		return cif;
+	}
+
+	public void setCif(String cif) {
+		this.cif = cif;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getPersona_contacto() {
+		return persona_contacto;
+	}
+
+	public void setPersona_contacto(String persona_contacto) {
+		this.persona_contacto = persona_contacto;
+	}
+
+	public ArrayList<Pago> getPagos() {
+		return pagos;
+	}
+
+	public void setPagos(ArrayList<Pago> pagos) {
+		this.pagos = pagos;
+	}
+
+	@Override
+	public String toString() {
+		return "Persona [codigo=" + codigo + ", cif=" + cif + ", nombre=" + nombre + ", persona_contacto="
+				+ persona_contacto + "]";
+	}
+}

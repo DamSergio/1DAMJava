@@ -1,0 +1,10 @@
+Factura: 5000_55555555K
+Cliente: 55555555K
+*************************Productos*************************
+0	Aguacate	5.98€/kg	2.0kg
+1	Chirimoya	5.44€/kg	3.0kg
+
+			TOTAL: 28.28
+			IVA: 1.1312
+			Descuento: 2
+			IMPORTE TOTAL: 27.4112

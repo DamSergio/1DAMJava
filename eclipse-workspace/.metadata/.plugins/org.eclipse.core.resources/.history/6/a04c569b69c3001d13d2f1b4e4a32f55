@@ -1,0 +1,176 @@
+package generador;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.awt.event.ActionEvent;
+
+public class Ventana extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtSd;
+	private JButton crear;
+	private JButton btnNewButton;
+	private ArrayList<Correo> correos;
+	
+	
+	public ArrayList<Correo> getCorreos() {
+		return correos;
+	}
+
+	public void setCorreos(ArrayList<Correo> correos) {
+		this.correos = correos;
+	}
+
+	/**
+	 * Launch the application.
+	 */
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Ventana frame = new Ventana();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Ventana() {
+		this.correos=new ArrayList<>();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 842, 487);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Selecciona el fichero alumnos para obtener los correos");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel.setBounds(130, 78, 605, 47);
+		contentPane.add(lblNewLabel);
+		
+		txtSd = new JTextField();
+		txtSd.setEditable(false);
+		txtSd.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtSd.setBounds(48, 190, 478, 29);
+		contentPane.add(txtSd);
+		txtSd.setColumns(10);
+		
+		btnNewButton = new JButton("Selecciona el fichero");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JFileChooser fc=new JFileChooser();
+				int seleccion=fc.showOpenDialog(contentPane);
+				if(seleccion==JFileChooser.APPROVE_OPTION){
+					txtSd.setText(fc.getSelectedFile().getPath());
+					int i=fc.getSelectedFile().getName().lastIndexOf('.');
+					String extension=fc.getSelectedFile().getName().substring(i+1);
+					if (extension.equals("csv")) {
+						JOptionPane.showMessageDialog(null, "Fichero valido");
+						crear.setEnabled(true);
+					} else {
+						JOptionPane.showMessageDialog(null, "El fichero tiene que ser .csv");
+						crear.setEnabled(false);
+					}
+				}
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnNewButton.setBounds(536, 190, 199, 29);
+		contentPane.add(btnNewButton);
+		
+		crear = new JButton("Crear y guardar fichero");
+		crear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Ventana app=new Ventana();
+				
+				try {
+					Scanner in=new Scanner(new File(txtSd.getText()));
+					
+					for (int i=0; i<5; i++) {
+						in.nextLine();
+					}
+					
+					while (in.hasNext()) {
+						String linea[]=in.nextLine().split(";");
+						linea[0]=app.quitarTildes(linea[0]);
+						
+						String nombre[]=linea[0].split(",");
+						String nombres[]=nombre[1].substring(1).split(" ");
+						String pNombre=nombres[0];
+						
+						String apellidos[]=nombre[0].split("0");
+						String apellido=apellidos[0];
+						
+						String curso=linea[2].toLowerCase().substring(0, linea[2].length()-1);
+						
+						app.getCorreos().add(new Correo(pNombre, apellido, curso, "@riberadeltajo.es"));
+					}
+				} catch (FileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				try {
+					PrintWriter out=new PrintWriter(new File("CorreosDam.txt"));
+					
+					out.println("Correos de: DAM");
+					out.println("numero;correo");
+					
+					for (Correo i:app.getCorreos()) {
+						out.println(i.toString());
+					}
+					
+					out.flush();
+					out.close();
+					
+					JOptionPane.showMessageDialog(null, "Fichero creado");
+				} catch (FileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
+		crear.setEnabled(false);
+		crear.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		crear.setBounds(251, 324, 315, 29);
+		contentPane.add(crear);
+	}
+
+	protected String quitarTildes(String string) {
+		
+		string=string.replace("á", "a");
+		string=string.replace("é", "e");
+		string=string.replace("í", "i");
+		string=string.replace("ó", "o");
+		string=string.replace("ú", "u");
+		
+		return string;
+		
+	}
+}

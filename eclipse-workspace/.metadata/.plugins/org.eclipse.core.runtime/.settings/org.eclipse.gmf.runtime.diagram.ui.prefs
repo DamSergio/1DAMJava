@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+org.eclipse.gmf.psize=289
+org.eclipse.gmf.runtime.diagram.ui.paletteCustomizations=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.gmf.runtime.diagram.ui.paletteCustomizations>\r\n<clazz.group.nodes>\r\n<clazz.tool.comment/>\r\n<clazz.tool.classifiertemplateparameter isVisible\="false"/>\r\n</clazz.group.nodes>\r\n</org.eclipse.gmf.runtime.diagram.ui.paletteCustomizations>

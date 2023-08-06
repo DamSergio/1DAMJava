@@ -1,0 +1,87 @@
+*****************************************************
+MES: Mayo
+Complementos nomina: Iván López
+*****************************************************
+Dia 1:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 72 a 0,05€/alumno= 3.6€
+Dia 2:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 79 a 0,05€/alumno= 3.95€
+Dia 3:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 79 a 0,05€/alumno= 3.95€
+Dia 4:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 79 a 0,05€/alumno= 3.95€
+Dia 5:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 79 a 0,05€/alumno= 3.95€
+Dia 6:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 9 a 0,05€/alumno= 0.45€
+Dia 7:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 67 a 0,05€/alumno= 3.35€
+Dia 8:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 80 a 0,05€/alumno= 4.0€
+Dia 9:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 68 a 0,05€/alumno= 3.4000000000000004€
+Dia 10:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 72 a 0,05€/alumno= 3.6€
+Dia 11:
+	Numero de clases: 8 a 5€/clase= 40€
+	Numero total alumnos: 139 a 0,05€/alumno= 6.95€
+Dia 12:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 79 a 0,05€/alumno= 3.95€
+Dia 13:
+	Numero de clases: 12 a 5€/clase= 60€
+	Numero total alumnos: 230 a 0,05€/alumno= 11.5€
+Dia 14:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 79 a 0,05€/alumno= 3.95€
+Dia 16:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 71 a 0,05€/alumno= 3.5500000000000003€
+Dia 18:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 80 a 0,05€/alumno= 4.0€
+Dia 19:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 68 a 0,05€/alumno= 3.4000000000000004€
+Dia 20:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 72 a 0,05€/alumno= 3.6€
+Dia 21:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 72 a 0,05€/alumno= 3.6€
+Dia 22:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 79 a 0,05€/alumno= 3.95€
+Dia 23:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 79 a 0,05€/alumno= 3.95€
+Dia 25:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 79 a 0,05€/alumno= 3.95€
+Dia 26:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 50 a 0,05€/alumno= 2.5€
+Dia 27:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 60 a 0,05€/alumno= 3.0€
+Dia 28:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 71 a 0,05€/alumno= 3.5500000000000003€
+Dia 29:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 69 a 0,05€/alumno= 3.45€
+Dia 30:
+	Numero de clases: 4 a 5€/clase= 20€
+	Numero total alumnos: 65 a 0,05€/alumno= 3.25€
+Total por clases: 600.0€
+Total por alumnos: 106.30000000000001€

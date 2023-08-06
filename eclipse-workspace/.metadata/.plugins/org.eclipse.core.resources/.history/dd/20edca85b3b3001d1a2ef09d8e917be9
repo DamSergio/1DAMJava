@@ -1,0 +1,28 @@
+package paquete;
+
+import java.util.Scanner;
+
+public class CajaBlanca {
+
+	public static void main(String[] args) {
+		
+		Scanner teclado=new Scanner(System.in);
+		System.out.println("Dame un numero");
+		int numero=teclado.nextInt();
+		int suma=0;//1
+		
+		for(int i=1;i<numero;i++) {//2
+			if(numero%i==0) {//3
+				suma=suma+i;//4
+			}//5Fin si
+		}//6Fin bucle
+		if(suma==numero) {//7
+			System.out.println("El numero "+numero+" es perfecto");//8
+		}else {
+		System.out.println("El numero "+numero+" no es perfecto");//9
+		}//10
+		
+		teclado.close();
+	}
+
+}

@@ -1,0 +1,28 @@
+package examen2019;
+
+public class Subcontrata extends Persona {
+	private int personal;
+
+	public Subcontrata() {
+		super();
+		this.personal = 0;
+	}
+
+	public Subcontrata(int codigo, String cif, String nombre, String persona_contacto, int personal) {
+		super(codigo, cif, nombre, persona_contacto);
+		this.personal = personal;
+	}
+
+	public int getPersonal() {
+		return personal;
+	}
+
+	public void setPersonal(int personal) {
+		this.personal = personal;
+	}
+
+	@Override
+	public String toString() {
+		return "Subcontrata [personal=" + personal + "]";
+	}
+}

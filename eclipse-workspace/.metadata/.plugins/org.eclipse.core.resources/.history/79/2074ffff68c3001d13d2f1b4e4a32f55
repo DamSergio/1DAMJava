@@ -1,0 +1,95 @@
+package generador;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Ventana extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtSd;
+	private JButton crear;
+	private JButton btnNewButton;
+
+	/**
+	 * Launch the application.
+	 */
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Ventana frame = new Ventana();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Ventana() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 842, 487);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Selecciona el fichero alumnos para obtener los correos");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel.setBounds(130, 78, 605, 47);
+		contentPane.add(lblNewLabel);
+		
+		txtSd = new JTextField();
+		txtSd.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtSd.setBounds(48, 190, 478, 29);
+		contentPane.add(txtSd);
+		txtSd.setColumns(10);
+		
+		btnNewButton = new JButton("Selecciona el fichero");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JFileChooser fc=new JFileChooser();
+				int seleccion=fc.showOpenDialog(contentPane);
+				if(seleccion==JFileChooser.APPROVE_OPTION){
+					txtSd.setText(fc.getSelectedFile().getPath());
+					int i=fc.getSelectedFile().getName().lastIndexOf('.');
+					String extension=fc.getSelectedFile().getName().substring(i+1);
+					if (extension.equals("csv")) {
+						JOptionPane.showMessageDialog(null, "Fichero valido");
+						crear.setEnabled(true);
+					} else {
+						JOptionPane.showMessageDialog(null, "El fichero tiene que ser .csv");
+						crear.setEnabled(false);
+					}
+				}
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnNewButton.setBounds(536, 190, 199, 29);
+		contentPane.add(btnNewButton);
+		
+		crear = new JButton("Crear y guardar fichero");
+		crear.setEnabled(false);
+		crear.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		crear.setBounds(251, 324, 315, 29);
+		contentPane.add(crear);
+	}
+}

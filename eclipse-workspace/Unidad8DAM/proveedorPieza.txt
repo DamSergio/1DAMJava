@@ -1,0 +1,11 @@
+El proveedor Suministros Talavera suministra:
+	*)Tornillo
+	*)Clavo
+	Peso total: 5.0
+El proveedor Suministros Torrijos suministra:
+	*)Arandela
+	Peso total: 2.0
+El proveedor Ferreteria Ribera suministra:
+	*)Chinchetas
+	*)Martillo
+	Peso total: 5.0

@@ -1,0 +1,91 @@
+package subneting;
+
+import java.util.Stack;
+
+public class Red {
+	private String ip;
+	private String mascara;
+	private int prefijo;
+	
+	public Red() {
+		super();
+		this.ip = "";
+		this.mascara = "";
+		this.prefijo = 0;
+	}
+	
+	public Red(String ip, String mascara, int prefijo) {
+		super();
+		this.ip = ip;
+		this.mascara = mascara;
+		this.prefijo = prefijo;
+	}
+	
+	public Red(String ip, String mascara) {
+		super();
+		this.ip = ip;
+		this.mascara = mascara;
+		this.generarPrefijo();
+	}
+	
+	public Red(String ip, int prefijo) {
+		super();
+		this.ip = ip;
+		this.mascara = mascara;
+		this.prefijo = prefijo;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
+	}
+
+	public String getMascara() {
+		return mascara;
+	}
+
+	public void setMascara(String mascara) {
+		this.mascara = mascara;
+	}
+
+	public int getPrefijo() {
+		return prefijo;
+	}
+
+	public void setPrefijo(int prefijo) {
+		this.prefijo = prefijo;
+	}
+	
+	public int generarPrefijo() {
+		String linea[];
+		linea=this.mascara.split(".");
+		int pre=0;
+		
+		for (int i=0; i<linea.length; i++) {
+			int n=Integer.parseInt(linea[i]);
+			Stack<Integer> bin=new Stack<>();
+			
+			while (n>0) {
+				bin.add(n%2);
+				n/=2;
+			}
+			
+			for (Integer j:bin) {
+				if (j==1) {
+					pre++;
+				}
+			}
+		}
+		
+		return pre;
+	}
+	
+	public static void main(String[] args) {
+		Red r=new Red("192.0.0.0","255.0.0.0");
+		
+		System.out.println(r.getPrefijo());
+	}
+}

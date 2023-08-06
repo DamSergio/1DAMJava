@@ -1,0 +1,68 @@
+package bingo;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Bingo {
+
+	public static void main(String[] args) {
+		Scanner t=new Scanner(System.in);
+		String nombre;
+		int n;
+		int cont=0;
+		int numeros[]=new int[20];
+		//Preguntar nombres
+		System.out.println("Dime el nombre del P1");
+		nombre=t.next();
+		Jugador p1=new Jugador(nombre);
+		System.out.println("Dime el nombre del P2");
+		nombre=t.next();
+		//Imprimir jugadores
+		Jugador p2=new Jugador(nombre);
+		System.out.println("\n------------------------------------------------------------");
+		System.out.println(p1);
+		System.out.println(p2);
+		System.out.println("------------------------------------------------------------\n");
+		//Juego
+		do {
+			do {
+				n=(int)(1+Math.random()*20);
+			} while (valido(n, numeros, cont));
+			numeros[cont]=n;
+			cont++;
+			System.out.println("ha salido el numero "+n);
+			if (p1.comparar(n)) {
+				System.out.println("El numero "+n+" esta en el boleto de "+p1.getNick());
+				System.out.println(p1.getNick()+" "+Arrays.toString(p1.getBoleto()));
+			}
+			if (p2.comparar(n)) {
+				System.out.println("El numero "+n+" esta en el boleto de "+p2.getNick());
+				System.out.println(p2.getNick()+" "+Arrays.toString(p2.getBoleto()));
+			}
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} while (p1.gana() && p2.gana());
+		//Comprobar quien gana
+		if (!p1.gana()) {
+			System.out.println(p1.getNombre()+" Gana!");
+		}
+		if (!p2.gana()) {
+			System.out.println(p2.getNombre()+" Gana!");
+		}
+		t.close();
+	}
+
+	private static boolean valido(int n, int[] numeros, int cont) {
+		for (int i=0; i<=cont; i++) {
+			if (numeros[i]==n) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+}

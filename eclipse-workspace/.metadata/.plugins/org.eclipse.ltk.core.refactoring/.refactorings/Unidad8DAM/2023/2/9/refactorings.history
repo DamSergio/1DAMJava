@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;f&apos; in &apos;boletin.BoletinNotasDAMW.imrpimirNotas()&apos; to &apos;out&apos;&#x0D;&#x0A;- Original project: &apos;Unidad8DAM&apos;&#x0D;&#x0A;- Original element: &apos;boletin.BoletinNotasDAMW.imrpimirNotas().f&apos;&#x0D;&#x0A;- Renamed element: &apos;f&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;f&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;boletin{BoletinNotasDAMW.java[BoletinNotasDAMW~imrpimirNotas@f!1492!1580!1504!1504!QPrintWriter;!0!false" name="out" references="true" stamp="1677460556042" version="1.0"/>
+</session>

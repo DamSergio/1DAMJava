@@ -1,0 +1,10 @@
+Factura: 2000_22222222H
+Cliente: 22222222H
+*************************Productos*************************
+0	Guayabas	4.88€/kg	5.0kg
+1	Aguacate	5.98€/kg	5.0kg
+
+			TOTAL: 54.3
+			IVA: 2.172
+			Descuento: 2
+			IMPORTE TOTAL: 54.471999999999994

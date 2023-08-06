@@ -1,0 +1,3 @@
+if (buttonGroup.getSelection().equals(ext)) {
+						System.out.println("Categoria Extra");
+					}
